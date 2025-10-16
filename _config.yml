@@ -1,0 +1,11 @@
+# GitHub Pages Configuration
+title: Drift Site
+description: A modern web presence powered by GitHub Pages
+theme: null
+
+# Build settings
+markdown: kramdown
+exclude:
+  - .git
+  - .github
+  - README.md
