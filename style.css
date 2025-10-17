@@ -1,0 +1,228 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Hero section - takes 60% of viewport height */
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000000;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Content section */
+.content {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-align: left;
+    position: relative;
+}
+
+.content-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: #4ecdc4;
+    text-align: left;
+}
+
+.subsection-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+    text-align: left;
+}
+
+.content-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    text-align: left;
+    max-width: 800px;
+}
+
+.feature-list {
+    list-style: none;
+    margin-bottom: 2rem;
+    padding-left: 0;
+}
+
+.feature-list li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #4ecdc4;
+    font-weight: bold;
+}
+
+.controls-list {
+    list-style: none;
+    margin-bottom: 2rem;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.8rem;
+}
+
+.controls-list li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    padding: 0.8rem 1.2rem;
+    background: rgba(78, 205, 196, 0.1);
+    border-left: 3px solid #4ecdc4;
+    border-radius: 4px;
+}
+
+.controls-list strong {
+    color: #ff6b6b;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .content {
+        padding: 3rem 1.5rem;
+    }
+    
+    .content-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.2rem;
+    }
+    
+    .content-text {
+        font-size: 1.1rem;
+    }
+    
+    .feature-list li {
+        font-size: 1rem;
+    }
+    
+    .controls-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .controls-list li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .content {
+        padding: 2rem 1rem;
+    }
+    
+    .content-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .content-text {
+        font-size: 1rem;
+    }
+    
+    .feature-list li {
+        font-size: 0.95rem;
+        padding-left: 1.2rem;
+    }
+    
+    .controls-list li {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+    }
+}
