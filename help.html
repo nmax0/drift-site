@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Drift Race</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="contributors.html" class="nav-link">Contributors</a></li>
+                <li class="nav-item"><a href="download.html" class="nav-link">Download</a></li>
+                <li class="nav-item"><a href="changelog.html" class="nav-link">Changelog</a></li>
+                <li class="nav-item"><a href="help.html" class="nav-link active">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1 class="page-title">Help & FAQ</h1>
+        <p class="page-subtitle">Getting started and common questions</p>
+    </section>
+
+    <section class="help-section">
+        <div class="faq-container">
+            <!-- How to install (Windows) -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">How to install (Windows)</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <h4 class="answer-subtitle">Prerequisites:</h4>
+                    <ul class="answer-list">
+                        <li>Python 3.11 or 3.12 (3.12 tested)</li>
+                        <li>Git (optional)</li>
+                    </ul>
+
+                    <h4 class="answer-subtitle">1. Clone or download the repo</h4>
+                    <div class="code-block">
+                        <code># Clone:</code>
+                        <code>git clone https://github.com/legoman0701/drift_race_test.git</code>
+                        <code class="code-comment"># Or download as ZIP and extract</code>
+                    </div>
+
+                    <h4 class="answer-subtitle">2. Create and activate a virtual environment</h4>
+                    <div class="code-block">
+                        <code class="code-comment"># From the project root</code>
+                        <code>python -m venv .venv</code>
+                        <code>.\.venv\Scripts\Activate.ps1</code>
+                    </div>
+
+                    <h4 class="answer-subtitle">3. Install dependencies</h4>
+                    <div class="code-block">
+                        <code>pip install -r requirements.txt</code>
+                    </div>
+
+                    <p class="answer-text">
+                        If Pygame-CE fails to build wheels, update pip and retry:
+                    </p>
+                    <div class="code-block">
+                        <code>python -m pip install --upgrade pip</code>
+                        <code>pip install -r requirements.txt</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to run -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">How to run</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <h4 class="answer-subtitle">Quick run (GUI):</h4>
+                    <div class="code-block">
+                        <code>python -m drift</code>
+                    </div>
+
+                    <h4 class="answer-subtitle">Alternate (explicit app module):</h4>
+                    <div class="code-block">
+                        <code>python -m drift.app</code>
+                    </div>
+
+                    <h4 class="answer-subtitle">Multiplayer from the command line:</h4>
+                    <p class="answer-text"><strong>Host a room:</strong></p>
+                    <div class="code-block">
+                        <code>python -m drift.app --mode host --code ABCD --name YourName</code>
+                    </div>
+
+                    <p class="answer-text"><strong>Join a room:</strong></p>
+                    <div class="code-block">
+                        <code>python -m drift.app --mode join --code ABCD --name YourName</code>
+                    </div>
+
+                    <p class="answer-note">
+                        <strong>Notes:</strong> Hosting acts as the server. Others join via the code shown in the UI. 
+                        A relay is used to help with NAT traversal.
+                    </p>
+                </div>
+            </div>
+
+            <!-- How to play -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">How to play</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <h4 class="answer-subtitle">Driving:</h4>
+                    <div class="controls-grid">
+                        <div class="control-item">
+                            <strong>Up / Z</strong>
+                            <span>Accelerate</span>
+                        </div>
+                        <div class="control-item">
+                            <strong>Down / S</strong>
+                            <span>Reverse</span>
+                        </div>
+                        <div class="control-item">
+                            <strong>Left / Q</strong>
+                            <span>Steer left</span>
+                        </div>
+                        <div class="control-item">
+                            <strong>Right / D</strong>
+                            <span>Steer right</span>
+                        </div>
+                        <div class="control-item">
+                            <strong>Space</strong>
+                            <span>Handbrake</span>
+                        </div>
+                        <div class="control-item">
+                            <strong>R</strong>
+                            <span>Reset your car</span>
+                        </div>
+                        <div class="control-item">
+                            <strong>L</strong>
+                            <span>Headlights on/off</span>
+                        </div>
+                        <div class="control-item">
+                            <strong>C</strong>
+                            <span>Cycle car type</span>
+                        </div>
+                        <div class="control-item">
+                            <strong>Esc</strong>
+                            <span>Open Settings</span>
+                        </div>
+                    </div>
+
+                    <h4 class="answer-subtitle">Gameplay tips:</h4>
+                    <ul class="answer-list">
+                        <li>Drifting is about balancing throttle and steering — too much angle, scrub speed; too little, straighten out.</li>
+                        <li>Handbrake can help initiate a drift, but throttle modulation keeps it going.</li>
+                        <li>Tire marks start smoky and fade toward rubber to show your line.</li>
+                        <li>Mouse wheel to zoom, middle-mouse drag to pan the camera.</li>
+                    </ul>
+
+                    <h4 class="answer-subtitle">AI and Multiplayer:</h4>
+                    <ul class="answer-list">
+                        <li><strong>N</strong> — spawn an AI (host only)</li>
+                        <li>In multiplayer, share the room code for others to join.</li>
+                    </ul>
+
+                    <h4 class="answer-subtitle">Debug & Performance:</h4>
+                    <ul class="answer-list">
+                        <li><strong>F3</strong> — toggle debug overlays. When OFF, the game skips debug calculations for better FPS.</li>
+                        <li>FPS and Debug status are shown in the top-right.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">Troubleshooting</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <ul class="answer-list">
+                        <li><strong>Pygame-CE install issues:</strong> Update pip, ensure Python 3.11/3.12, then reinstall requirements.</li>
+                        <li><strong>No audio or errors at startup:</strong> The game auto-falls back to simpler audio settings; if all fail, audio is disabled.</li>
+                        <li><strong>Performance on low-end PCs:</strong> Disable debug (F3), keep lights off (L), and avoid spawning many AI cars.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- How to uninstall / clean up -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">How to uninstall / clean up</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="code-block">
+                        <code class="code-comment"># Deactivate and remove the virtual environment</code>
+                        <code>Deactivate</code>
+                        <code>Remove-Item -Recurse -Force .venv</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="help.js"></script>
+</body>
+</html>
