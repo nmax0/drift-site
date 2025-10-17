@@ -30,10 +30,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Add parallax effect to hero title
+    const navbar = document.querySelector('.navbar');
+    
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const heroTitle = document.querySelector('.hero-title');
         
+        // Add scrolled class to navbar
+        if (scrolled > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        // Parallax effect
         if (heroTitle && scrolled < window.innerHeight * 0.6) {
             const speed = scrolled * 0.5;
             heroTitle.style.transform = `translateY(${speed}px)`;
