@@ -495,6 +495,59 @@ body {
     line-height: 1.6;
 }
 
+/* Expandable changelog entries */
+.changelog-entry.expandable {
+    cursor: pointer;
+}
+
+.changelog-entry.expandable .entry-text::after {
+    content: ' ▼';
+    font-size: 0.8rem;
+    color: #4ecdc4;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.changelog-entry.expandable.expanded .entry-text::after {
+    transform: rotate(180deg);
+}
+
+.entry-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, margin-top 0.4s ease;
+    margin-top: 0;
+}
+
+.changelog-entry.expanded .entry-details {
+    max-height: 1000px;
+    margin-top: 1rem;
+}
+
+.entry-details ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.entry-details li {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.entry-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0.5rem;
+    color: #4ecdc4;
+    font-weight: bold;
+}
+
 /* Help Section */
 .help-section {
     min-height: 100vh;

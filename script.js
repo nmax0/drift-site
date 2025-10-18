@@ -62,4 +62,29 @@ document.addEventListener('DOMContentLoaded', function() {
             hero.scrollIntoView({ behavior: 'smooth' });
         }
     });
+    
+    // Expandable changelog entries
+    const expandableEntries = document.querySelectorAll('.changelog-entry.expandable');
+    
+    expandableEntries.forEach(entry => {
+        // Check if entry has details
+        const details = entry.querySelector('.entry-details');
+        if (!details || !details.textContent.trim()) {
+            // Remove expandable class if no details
+            entry.classList.remove('expandable');
+            return;
+        }
+        
+        // Add click event to toggle expansion
+        entry.addEventListener('click', function() {
+            this.classList.toggle('expanded');
+        });
+        
+        // Add hover effect
+        entry.addEventListener('mouseenter', function() {
+            if (!this.classList.contains('expanded')) {
+                this.style.cursor = 'pointer';
+            }
+        });
+    });
 });
