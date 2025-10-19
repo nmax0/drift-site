@@ -1,6 +1,6 @@
 # Drift Race - Official Website
 
-The official website for Drift Race, a multiplayer racing game featuring realistic physics, dynamic graphics, and engaging gameplay.
+The official website for Drift Race, a multiplayer racing game featuring arcade physics, dynamic graphics, and engaging gameplay.
 
 ## 🌐 Live Site
 
@@ -8,7 +8,7 @@ Visit the live site at: [https://nmax0.github.io/drift-site/](https://nmax0.gith
 
 ## 🎮 About Drift Race
 
-Drift Race is a racing game built with custom physics and rendering engines. Experience arcade vehicle dynamics, multiplayer racing, and stunning visual effects.
+Drift Race is a racing game built with custom physics and rendering engines. An arcade vehicle dynamics experience, multiplayer racing, and stunning visual effects.
 
 ## 📄 License
 
