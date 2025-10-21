@@ -29,42 +29,67 @@
             <!-- How to install (Windows) -->
             <div class="faq-item">
                 <button class="faq-question">
-                    <span class="question-text">How to install (Windows)</span>
+                    <span class="question-text">How to install</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
                     <h4 class="answer-subtitle">Prerequisites:</h4>
                     <ul class="answer-list">
                         <li>Python 3.11 or 3.12 (3.12 tested)</li>
-                        <li>Git (optional)</li>
+                        <li>Git (optional, for cloning)</li>
                     </ul>
 
-                    <h4 class="answer-subtitle">1. Clone or download the repo</h4>
+                    <h4 class="answer-subtitle">Step 1: Get the source code</h4>
+                    <p class="answer-text"><strong>Option A: Download ZIP (any OS)</strong></p>
+                    <p class="answer-text">Download from <a href="download.html" class="inline-link" target="_blank">Download</a> page and extract the archive.</p>
+
+                    <p class="answer-text"><strong>Option B: Windows Installer</strong></p>
+                    <p class="answer-text">Download and run the installer from the <a href="download.html" class="inline-link">Download</a> page (skip to "How to run" if using installer).</p>
+                    
+                    <p class="answer-text"><strong>Option C: Git clone (any OS)</strong></p>
                     <div class="code-block">
-                        <code># Clone:</code>
                         <code>git clone https://github.com/legoman0701/drift_race_test.git</code>
-                        <code class="code-comment"># Or download as ZIP and extract</code>
+                        <code>cd drift_race_test</code>
                     </div>
 
-                    <h4 class="answer-subtitle">2. Create and activate a virtual environment</h4>
+                    <h4 class="answer-subtitle">Step 2: Create and activate a virtual environment</h4>
+                    <p class="answer-text"><strong>Windows (PowerShell):</strong></p>
                     <div class="code-block">
                         <code class="code-comment"># From the project root</code>
                         <code>python -m venv .venv</code>
                         <code>.\.venv\Scripts\Activate.ps1</code>
                     </div>
 
-                    <h4 class="answer-subtitle">3. Install dependencies</h4>
+                    <p class="answer-text"><strong>Linux / macOS:</strong></p>
+                    <div class="code-block">
+                        <code class="code-comment"># From the project root</code>
+                        <code>python3 -m venv .venv</code>
+                        <code>source .venv/bin/activate</code>
+                    </div>
+
+                    <h4 class="answer-subtitle">Step 3: Install dependencies</h4>
+                    <p class="answer-text"><strong>Option A: Install from requirements.txt</strong></p>
                     <div class="code-block">
                         <code>pip install -r requirements.txt</code>
                     </div>
 
-                    <p class="answer-text">
-                        If Pygame-CE fails to build wheels, update pip and retry:
+                    <p class="answer-text"><strong>Option B: Install in editable mode</strong></p>
+                    <div class="code-block">
+                        <code>pip install -e .</code>
+                    </div>
+
+                    <p class="answer-note">
+                        <strong>Troubleshooting:</strong> If Pygame-CE fails to build wheels, update pip and retry:
                     </p>
                     <div class="code-block">
                         <code>python -m pip install --upgrade pip</code>
+                        <code class="code-comment"># Then try installing again</code>
                         <code>pip install -r requirements.txt</code>
                     </div>
+
+                    <p class="answer-note">
+                        <strong>Note:</strong> On some systems, you may need to use <strong>python3</strong> and <strong>pip3</strong> instead of <strong>python</strong> and <strong>pip</strong>.
+                    </p>
                 </div>
             </div>
 
@@ -75,6 +100,11 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
+                    <p class="answer-note">
+                        <strong>Important:</strong> Make sure your virtual environment is activated before running the game! 
+                        See "How to install" for activation commands, or check "Can't activate venv?" below for alternatives.
+                    </p>
+
                     <h4 class="answer-subtitle">Quick run (GUI):</h4>
                     <div class="code-block">
                         <code>python -m drift</code>
@@ -98,7 +128,7 @@
 
                     <p class="answer-note">
                         <strong>Notes:</strong> Hosting acts as the server. Others join via the code shown in the UI. 
-                        A relay is used to help with NAT traversal.
+                        A relay is used to help with NAT traversal. On some systems, use <strong>python3</strong> instead of <strong>python</strong>.
                     </p>
                 </div>
             </div>
@@ -172,18 +202,27 @@
                 </div>
             </div>
 
-            <!-- Troubleshooting -->
+            <!-- How to uninstall / clean up -->
             <div class="faq-item">
                 <button class="faq-question">
-                    <span class="question-text">Troubleshooting</span>
+                    <span class="question-text">How to uninstall / clean up</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <ul class="answer-list">
-                        <li><strong>Pygame-CE install issues:</strong> Update pip, ensure Python 3.11/3.12, then reinstall requirements.</li>
-                        <li><strong>No audio or errors at startup:</strong> The game auto-falls back to simpler audio settings; if all fail, audio is disabled.</li>
-                        <li><strong>Performance on low-end PCs:</strong> Disable debug (F3), keep lights off (L), and avoid spawning many AI cars.</li>
-                    </ul>
+                    <h4 class="answer-subtitle">If you installed via the installer:</h4>
+                    <p class="answer-text">
+                        Run <strong>unins000.exe</strong> located in the game installation folder to uninstall the game.
+                    </p>
+
+                    <h4 class="answer-subtitle">If you cloned/downloaded from source:</h4>
+                    <div class="code-block">
+                        <code class="code-comment"># Deactivate and remove the virtual environment</code>
+                        <code>Deactivate</code>
+                        <code>Remove-Item -Recurse -Force .venv</code>
+                    </div>
+                    <p class="answer-text">
+                        Then simply delete the project folder.
+                    </p>
                 </div>
             </div>
 
@@ -211,6 +250,7 @@
                     <p class="answer-text">
                         Make sure your virtual environment is active before running the game. This ensures you're using the correct dependencies.
                     </p>
+                    <p class="answer-text"><strong>Windows:</strong></p>
                     <div class="code-block">
                         <code class="code-comment"># Activate the virtual environment</code>
                         <code>.\.venv\Scripts\Activate.ps1</code>
@@ -219,10 +259,28 @@
                         <code>python -m drift</code>
                     </div>
 
+                    <p class="answer-text"><strong>Linux / macOS:</strong></p>
+                    <div class="code-block">
+                        <code class="code-comment"># Activate the virtual environment</code>
+                        <code>source .venv/bin/activate</code>
+                        <code></code>
+                        <code class="code-comment"># Then run the game</code>
+                        <code>python3 -m drift</code>
+                    </div>
+
                     <h4 class="answer-subtitle">3. Verify your installation</h4>
+                    <p class="answer-text"><strong>Windows:</strong></p>
                     <div class="code-block">
                         <code class="code-comment"># Check which pygame version is installed</code>
                         <code>pip list | Select-String pygame</code>
+                        <code></code>
+                        <code class="code-comment"># Should show: pygame-ce (not pygame)</code>
+                    </div>
+
+                    <p class="answer-text"><strong>Linux / macOS:</strong></p>
+                    <div class="code-block">
+                        <code class="code-comment"># Check which pygame version is installed</code>
+                        <code>pip list | grep pygame</code>
                         <code></code>
                         <code class="code-comment"># Should show: pygame-ce (not pygame)</code>
                     </div>
@@ -243,29 +301,66 @@
                 </div>
             </div>
 
-            <!-- How to uninstall / clean up -->
+            <!-- Can't activate venv? -->
             <div class="faq-item">
                 <button class="faq-question">
-                    <span class="question-text">How to uninstall / clean up</span>
+                    <span class="question-text">Can't activate venv?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <h4 class="answer-subtitle">If you installed via the installer:</h4>
                     <p class="answer-text">
-                        Run <strong>unins000.exe</strong> located in the game installation folder to uninstall the game.
+                        If you can't activate your virtual environment or prefer not to, you can run commands directly 
+                        using the full path to the Python and pip executables inside the venv.
                     </p>
 
-                    <h4 class="answer-subtitle">If you cloned/downloaded from source:</h4>
+                    <h4 class="answer-subtitle">Windows (PowerShell / CMD):</h4>
                     <div class="code-block">
-                        <code class="code-comment"># Deactivate and remove the virtual environment</code>
-                        <code>Deactivate</code>
-                        <code>Remove-Item -Recurse -Force .venv</code>
+                        <code class="code-comment"># Install packages</code>
+                        <code>.\.venv\Scripts\pip.exe install -r requirements.txt</code>
+                        <code></code>
+                        <code class="code-comment"># Run the game</code>
+                        <code>.\.venv\Scripts\python.exe -m drift</code>
                     </div>
-                    <p class="answer-text">
-                        Then simply delete the project folder.
+
+                    <h4 class="answer-subtitle">Linux / macOS:</h4>
+                    <div class="code-block">
+                        <code class="code-comment"># Install packages</code>
+                        <code>.venv/bin/pip install -r requirements.txt</code>
+                        <code></code>
+                        <code class="code-comment"># Run the game</code>
+                        <code>.venv/bin/python -m drift</code>
+                    </div>
+
+                    <p class="answer-note">
+                        <strong>Note:</strong> On some systems, the executables might be named <strong>python3</strong> and <strong>pip3</strong> 
+                        instead of <strong>python</strong> and <strong>pip</strong>. If one doesn't work, try the other.
                     </p>
+
+                    <h4 class="answer-subtitle">Why use a virtual environment?</h4>
+                    <ul class="answer-list">
+                        <li>Keeps project dependencies isolated from system Python</li>
+                        <li>Prevents version conflicts with other Python projects</li>
+                        <li>Makes it easier to manage and reproduce the exact environment</li>
+                        <li>Allows different projects to use different package versions</li>
+                    </ul>
                 </div>
             </div>
+
+            <!-- Troubleshooting -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">Troubleshooting</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <ul class="answer-list">
+                        <li><strong>Pygame-CE install issues:</strong> Update pip, ensure Python 3.11/3.12, then reinstall requirements.</li>
+                        <li><strong>No audio or errors at startup:</strong> The game auto-falls back to simpler audio settings; if all fail, audio is disabled.</li>
+                        <li><strong>Performance on low-end PCs:</strong> Disable debug (F3), keep lights off (L), and avoid spawning many AI cars.</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </section>
 
