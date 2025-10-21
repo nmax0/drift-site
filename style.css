@@ -741,37 +741,92 @@ body {
 .download-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
-.version-card {
+/* Version accordion items */
+.version-item {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(78, 205, 196, 0.3);
     border-radius: 12px;
-    padding: 2.5rem;
+    overflow: hidden;
     transition: all 0.3s ease;
 }
 
-.version-card:hover {
+.version-item:hover {
+    border-color: rgba(78, 205, 196, 0.4);
+}
+
+.version-item.active {
     border-color: rgba(78, 205, 196, 0.5);
     box-shadow: 0 8px 30px rgba(78, 205, 196, 0.15);
 }
 
-.version-card.latest {
+.version-item.latest {
     border-color: rgba(255, 107, 107, 0.5);
     background: rgba(255, 107, 107, 0.03);
 }
 
-.version-card.latest:hover {
+.version-item.latest:hover {
+    border-color: rgba(255, 107, 107, 0.6);
+}
+
+.version-item.latest.active {
     border-color: #ff6b6b;
     box-shadow: 0 8px 30px rgba(255, 107, 107, 0.2);
+}
+
+.version-toggle {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.version-toggle:hover {
+    background: rgba(78, 205, 196, 0.05);
+}
+
+.version-item.latest .version-toggle:hover {
+    background: rgba(255, 107, 107, 0.05);
+}
+
+.toggle-icon {
+    font-size: 2rem;
+    color: #4ecdc4;
+    font-weight: 300;
+    transition: transform 0.3s ease, color 0.3s ease;
+    line-height: 1;
+    min-width: 30px;
+    text-align: center;
+}
+
+.version-item.active .toggle-icon {
+    transform: rotate(45deg);
+    color: #ff6b6b;
+}
+
+.version-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 2.5rem;
+}
+
+.version-item.active .version-content {
+    max-height: 5000px;
+    padding: 0 2.5rem 2.5rem 2.5rem;
 }
 
 .version-header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
 }
 
 .version-number {
@@ -1108,8 +1163,16 @@ body {
         padding: 3rem 1.5rem;
     }
     
-    .version-card {
-        padding: 2rem;
+    .version-toggle {
+        padding: 1.5rem 2rem;
+    }
+    
+    .version-content {
+        padding: 0 2rem;
+    }
+    
+    .version-item.active .version-content {
+        padding: 0 2rem 2rem 2rem;
     }
     
     .version-number {
@@ -1317,8 +1380,26 @@ body {
         padding: 2rem 1rem;
     }
     
-    .version-card {
-        padding: 1.5rem;
+    .version-toggle {
+        padding: 1.5rem 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .toggle-icon {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .version-content {
+        padding: 0 1.5rem;
+    }
+    
+    .version-item.active .version-content {
+        padding: 0 1.5rem 1.5rem 1.5rem;
     }
     
     .version-header {

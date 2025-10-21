@@ -27,134 +27,144 @@
     <section class="download-section">
         <div class="download-container">
             <!-- Version v0.7.10 (Latest) -->
-            <div class="version-card latest">
-                <div class="version-header">
-                    <h2 class="version-number">v0.7.10</h2>
-                    <span class="latest-badge">Latest</span>
-                </div>
-                <p class="version-date">Released: October 19, 2025</p>
-                <p class="version-description">
-                    Major update with UI restructure, host/join multiplayer interface, game latency optimization, 
-                    and critical physics patches. Fixed RWD physics (was incorrectly AWD causing asymmetric torque), 
-                    improved path handling for better portability, and resolved various logic issues.
-                </p>
-                
-                <div class="download-options">
-                    <h3 class="options-title">Download Options:</h3>
-                    
-                    <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.10/drift_race_v0.7.10_installer.exe" 
-                       class="download-button installer" 
-                       download>
-                        <div class="button-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                        </div>
-                        <div class="button-content">
-                            <span class="button-title">Windows Installer</span>
-                            <span class="button-subtitle">.exe • Recommended</span>
-                        </div>
-                    </a>
-                    
-                    <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.10/drift_race_test-0.7.10.zip" 
-                       class="download-button zip" 
-                       download>
-                        <div class="button-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                        </div>
-                        <div class="button-content">
-                            <span class="button-title">Portable ZIP</span>
-                            <span class="button-subtitle">.zip • Extract & Run</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="version-features">
-                    <h4 class="features-title">Key Features:</h4>
-                    <ul class="features-list">
-                        <li>Restructured UI system</li>
-                        <li>New host/join multiplayer interface</li>
-                        <li>Optimized game latency</li>
-                        <li>Fixed RWD physics (no more asymmetric torque)</li>
-                        <li>Improved path handling for portability</li>
-                        <li>Logic issue fixes and stability improvements</li>
-                    </ul>
-                </div>
-
-                <div class="version-info">
-                    <p class="info-text">
-                        <strong>Requirements:</strong> Windows 10/11, Python 3.11+ (for source)
+            <div class="version-item latest">
+                <button class="version-toggle">
+                    <div class="version-header">
+                        <h2 class="version-number">v0.7.10</h2>
+                        <span class="latest-badge">Latest</span>
+                    </div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="version-content">
+                    <p class="version-date">Released: October 19, 2025</p>
+                    <p class="version-description">
+                        Major update with UI restructure, host/join multiplayer interface, game latency optimization, 
+                        and critical physics patches. Fixed RWD physics (was incorrectly AWD causing asymmetric torque), 
+                        improved path handling for better portability, and resolved various logic issues.
                     </p>
-                    <p class="info-text">
-                        <strong>Installation:</strong> Run the installer or extract the ZIP file. 
-                        See <a href="help.html" class="inline-link">Help</a> for detailed instructions.
-                    </p>
+                    
+                    <div class="download-options">
+                        <h3 class="options-title">Download Options:</h3>
+                        
+                        <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.10/drift_race_v0.7.10_installer.exe" 
+                           class="download-button installer" 
+                           download>
+                            <div class="button-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                            </div>
+                            <div class="button-content">
+                                <span class="button-title">Windows Installer</span>
+                                <span class="button-subtitle">.exe • Recommended</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.10/drift_race_test-0.7.10.zip" 
+                           class="download-button zip" 
+                           download>
+                            <div class="button-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                            </div>
+                            <div class="button-content">
+                                <span class="button-title">Portable ZIP</span>
+                                <span class="button-subtitle">.zip • Extract & Run</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="version-features">
+                        <h4 class="features-title">Key Features:</h4>
+                        <ul class="features-list">
+                            <li>Restructured UI system</li>
+                            <li>New host/join multiplayer interface</li>
+                            <li>Optimized game latency</li>
+                            <li>Fixed RWD physics (no more asymmetric torque)</li>
+                            <li>Improved path handling for portability</li>
+                            <li>Logic issue fixes and stability improvements</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-info">
+                        <p class="info-text">
+                            <strong>Requirements:</strong> Windows 10/11, Python 3.11+ (for source)
+                        </p>
+                        <p class="info-text">
+                            <strong>Installation:</strong> Run the installer or extract the ZIP file. 
+                            See <a href="help.html" class="inline-link">Help</a> for detailed instructions.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <!-- Version v0.7.8 -->
-            <div class="version-card">
-                <div class="version-header">
-                    <h2 class="version-number">v0.7.8</h2>
-                </div>
-                <p class="version-date">Released: October 17, 2025</p>
-                <p class="version-description">
-                    Previous version featuring debug mode, enhanced audio system with turbo effects, 
-                    and improved physics. Includes AE86 and M5 car models with full multiplayer support.
-                </p>
-                
-                <div class="download-options">
-                    <h3 class="options-title">Download Options:</h3>
+            <div class="version-item">
+                <button class="version-toggle">
+                    <div class="version-header">
+                        <h2 class="version-number">v0.7.8</h2>
+                    </div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="version-content">
+                    <p class="version-date">Released: October 17, 2025</p>
+                    <p class="version-description">
+                        Previous version featuring debug mode, enhanced audio system with turbo effects, 
+                        and improved physics. Includes AE86 and M5 car models with full multiplayer support.
+                    </p>
                     
-                    <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.8/v0.7.8_installer.exe" 
-                       class="download-button installer" 
-                       download>
-                        <div class="button-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                        </div>
-                        <div class="button-content">
-                            <span class="button-title">Windows Installer</span>
-                            <span class="button-subtitle">.exe</span>
-                        </div>
-                    </a>
-                    
-                    <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.8/v0.7.8.zip" 
-                       class="download-button zip" 
-                       download>
-                        <div class="button-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                        </div>
-                        <div class="button-content">
-                            <span class="button-title">Portable ZIP</span>
-                            <span class="button-subtitle">.zip</span>
-                        </div>
-                    </a>
-                </div>
+                    <div class="download-options">
+                        <h3 class="options-title">Download Options:</h3>
+                        
+                        <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.8/v0.7.8_installer.exe" 
+                           class="download-button installer" 
+                           download>
+                            <div class="button-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                            </div>
+                            <div class="button-content">
+                                <span class="button-title">Windows Installer</span>
+                                <span class="button-subtitle">.exe</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.8/v0.7.8.zip" 
+                           class="download-button zip" 
+                           download>
+                            <div class="button-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                            </div>
+                            <div class="button-content">
+                                <span class="button-title">Portable ZIP</span>
+                                <span class="button-subtitle">.zip</span>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="version-features">
-                    <h4 class="features-title">Key Features:</h4>
-                    <ul class="features-list">
-                        <li>Debug mode with performance overlays</li>
-                        <li>Enhanced audio and turbo system</li>
-                        <li>Updated physics and car handling</li>
-                        <li>Multiple car models (AE86, M5)</li>
-                        <li>Online multiplayer support</li>
-                        <li>AI opponents</li>
-                    </ul>
+                    <div class="version-features">
+                        <h4 class="features-title">Key Features:</h4>
+                        <ul class="features-list">
+                            <li>Debug mode with performance overlays</li>
+                            <li>Enhanced audio and turbo system</li>
+                            <li>Updated physics and car handling</li>
+                            <li>Multiple car models (AE86, M5)</li>
+                            <li>Online multiplayer support</li>
+                            <li>AI opponents</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -182,5 +192,6 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="download.js"></script>
 </body>
 </html>
