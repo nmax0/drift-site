@@ -344,10 +344,113 @@ body {
 .changelog-section {
     min-height: 100vh;
     padding: 4rem 2rem;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
+/* Version-based timeline */
+.version-timeline {
+    position: relative;
+}
+
+.version-block {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(78, 205, 196, 0.2);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.version-block:hover {
+    border-color: rgba(78, 205, 196, 0.4);
+    box-shadow: 0 4px 20px rgba(78, 205, 196, 0.1);
+}
+
+.version-header-block {
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 107, 107, 0.1));
+    padding: 2rem;
+    border-bottom: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+.version-title {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4ecdc4, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.version-subtitle {
+    display: block;
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.release-date {
+    font-size: 0.95rem;
+    color: #808080;
+    font-style: italic;
+}
+
+.version-content-block {
+    padding: 2rem;
+}
+
+.changes-section {
+    margin-bottom: 2rem;
+}
+
+.changes-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4ecdc4;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(78, 205, 196, 0.3);
+}
+
+.changes-section.technical .section-title {
+    color: #ffc107;
+    border-bottom-color: rgba(255, 193, 7, 0.3);
+}
+
+.changes-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.changes-list li {
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+    padding-left: 1.8rem;
+    position: relative;
+}
+
+.changes-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #4ecdc4;
+    font-size: 1.2rem;
+}
+
+.changes-section.technical .changes-list li::before {
+    color: #ffc107;
+}
+
+/* Old timeline styles (keeping for backwards compatibility) */
 .timeline {
     position: relative;
     padding-left: 3rem;

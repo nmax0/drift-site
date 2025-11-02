@@ -25,519 +25,297 @@
     </section>
 
     <section class="changelog-section">
-        <div class="timeline">
-            <!-- October 19, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 19, 2025</h2>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">improved path handling for portability</p>
-            </div>
-
-            <!-- October 18, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 18, 2025</h2>
-            </div>
-            <div class="changelog-entry patch expandable">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">fixed incorrect room code issue and room code length</p>
-                <div class="entry-details">
-                    <ul>
-                        <li>incorrect use of the room code issue now showing in game options</li>
-                        <li>room code length still being 6 instead of 4</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">fixed a typo in physics</p>
-            </div>
-            <div class="changelog-entry version expandable">
-                <span class="version-badge">v0.7.10</span>
-                <p class="entry-text">Several Host/Join substages and UI optimizations</p>
-                <div class="entry-details">
-                    <ul>
-                        <li>Auto select username rect</li>
-                        <li>Click host/join button with Enter</li>
-                        <li>Move to the next rect with Tab</li>
-                        <li>Cancel game host/join with Esc</li>
-                        <li>Room code length must be 6</li>
-                        <li>Show room code in footer</li>
-                        <li>Remove settings in lobby</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.7.9</span>
-                <p class="entry-text">UI code restructure. Add of host/join game page.</p>
-            </div>
+        <div class="version-timeline">
             
-            <!-- October 17, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 17, 2025</h2>
-            </div>
-            <div class="changelog-entry version expandable">
-                <span class="version-badge">v0.7.8</span>
-                <p class="entry-text">Add of debug mode</p>
-                <div class="entry-details">
-                    <ul>
-                        <li>Press F3 to toggle debug overlay</li>
-                        <li>Shows real-time physics data, collision boxes, and performance metrics</li>
-                    </ul>
+            <!-- Version 0.6 -->
+            <div class="version-block">
+                <div class="version-header-block">
+                    <h2 class="version-title">Version 0.6</h2>
+                    <span class="version-subtitle">Performance & UI</span>
+                    <p class="release-date">Released: November 2, 2025</p>
+                </div>
+                
+                <div class="version-content-block">
+                    <div class="changes-section">
+                        <h3 class="section-title">New Features</h3>
+                        <ul class="changes-list">
+                            <li>Automatic track chunk slicing and storage at first run for improved loading times</li>
+                            <li>Text rendering cache implemented for settings, header, and footer components</li>
+                            <li>Comprehensive host/join game UI overhaul with enhanced user experience</li>
+                            <li>New loading screen with progress indicators</li>
+                            <li>Key bindings management system added to settings</li>
+                            <li>Improved button styling for a more polished appearance</li>
+                            <li>Updated information navbar with better organization</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="section-title">Improvements</h3>
+                        <ul class="changes-list">
+                            <li>Optimized physics calculations to reduce unnecessary computations</li>
+                            <li>Removed expensive assets from final game package</li>
+                            <li>Car specifications now managed through specs.json for easier configuration</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="section-title">Bug Fixes</h3>
+                        <ul class="changes-list">
+                            <li>Fixed error when attempting to join non-existent rooms</li>
+                            <li>Game creation can now be cancelled with Esc key</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section technical">
+                        <h3 class="section-title">Technical Changes</h3>
+                        <ul class="changes-list">
+                            <li>Button class refactored to use stage path architecture</li>
+                            <li>Compiler and installer now support flexible file types and paths</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- October 16, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 16, 2025</h2>
-            </div>
-            <div class="changelog-entry version expandable">
-                <span class="version-badge">v0.7.7</span>
-                <p class="entry-text">New audio and turbo system</p>
-                <div class="entry-details">
-                    <ul>
-                        <li>Complete overhaul of the audio engine with positional sound support</li>
-                        <li>New turbo boost mechanic with charge-up system</li>
-                        <li>Added turbo sound effects with dynamic pitch based on speed</li>
-                        <li>Improved audio mixing for better balance between engine, tire, and environmental sounds</li>
-                    </ul>
+            <!-- Version 0.5 -->
+            <div class="version-block">
+                <div class="version-header-block">
+                    <h2 class="version-title">Version 0.5</h2>
+                    <span class="version-subtitle">Assets & UI</span>
+                    <p class="release-date">Released: October 19, 2025</p>
+                </div>
+                
+                <div class="version-content-block">
+                    <div class="changes-section">
+                        <h3 class="section-title">New Features</h3>
+                        <ul class="changes-list">
+                            <li>Enhanced tire grip model for improved drift control</li>
+                            <li>High-resolution AE86 visual assets including sprites and shadows</li>
+                            <li>Dynamic turbo system with improved audio feedback</li>
+                            <li>Debug mode accessible via F3 key for performance monitoring</li>
+                            <li>Comprehensive host/join game interface</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="section-title">Improvements</h3>
+                        <ul class="changes-list">
+                            <li>Complete UI code restructure for better maintainability</li>
+                            <li>Improved path handling for cross-platform portability</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section technical">
+                        <h3 class="section-title">Technical Changes</h3>
+                        <ul class="changes-list">
+                            <li>Full UI code rework with modular architecture</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- October 15, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 15, 2025</h2>
-            </div>
-            <div class="changelog-entry version expandable">
-                <span class="version-badge">v0.7.6</span>
-                <p class="entry-text">Physics update & AE86 new assets</p>
-                <div class="entry-details">
-                    <ul>
-                        <li>Updated AE86 visual assets with higher resolution sprites</li>
-                        <li>Improved tire grip model for better drift control</li>
-                        <li>Added new shadow rendering for improved depth perception</li>
-                    </ul>
+            <!-- Version 0.4 -->
+            <div class="version-block">
+                <div class="version-header-block">
+                    <h2 class="version-title">Version 0.4</h2>
+                    <span class="version-subtitle">Chunk System, Physics & M5</span>
+                    <p class="release-date">Released: October 12, 2025</p>
+                </div>
+                
+                <div class="version-content-block">
+                    <div class="changes-section">
+                        <h3 class="section-title">New Features</h3>
+                        <ul class="changes-list">
+                            <li>Revolutionary chunk map system for large-scale track rendering</li>
+                            <li>M5 car model with unique handling characteristics</li>
+                            <li>AI neural network model for intelligent opponent behavior</li>
+                            <li>Threaded audio system with turbo sound effects</li>
+                            <li>Input smoothing for more responsive controls</li>
+                            <li>Car selection system: press 'C' to cycle between vehicles</li>
+                            <li>Random AI car selection for variety</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="section-title">Improvements</h3>
+                        <ul class="changes-list">
+                            <li>Enhanced camera logic for better visual tracking</li>
+                            <li>Optimized scaling method for chunk rendering mode</li>
+                            <li>Refined car physics for more realistic driving dynamics</li>
+                            <li>Unique characteristics assigned to each car model</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section technical">
+                        <h3 class="section-title">Technical Changes</h3>
+                        <ul class="changes-list">
+                            <li>slice_map.py utility for automatic track map tiling</li>
+                            <li>Added Pillow and NumPy dependencies for image processing</li>
+                            <li>Car class system redesign for better extensibility</li>
+                            <li>Complete project structure reorganization</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- October 12, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 12, 2025</h2>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Assets restructure</p>
-            </div>
+            <!-- Version 0.3 -->
+            <div class="version-block">
+                <div class="version-header-block">
+                    <h2 class="version-title">Version 0.3</h2>
+                    <span class="version-subtitle">Audio & Assets</span>
+                    <p class="release-date">Released: September 30, 2025</p>
+                </div>
+                
+                <div class="version-content-block">
+                    <div class="changes-section">
+                        <h3 class="section-title">New Features</h3>
+                        <ul class="changes-list">
+                            <li>Advanced sound system based on RPM dynamics</li>
+                            <li>Engine RPM gauges displayed in UI</li>
+                            <li>64-rotation car assets (diffuse, shadow, headlights) for smooth animation</li>
+                            <li>Enhanced settings UI with improved navigation</li>
+                        </ul>
+                    </div>
 
-            <!-- October 11, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 11, 2025</h2>
-            </div>
-            <div class="changelog-entry version expandable">
-                <span class="version-badge">v0.7.5</span>
-                <p class="entry-text">Car class update. 'C' to change car. AI car is random</p>
-                <div class="entry-details">
-                    <ul>
-                        <li>Press 'C' key to cycle through available car models</li>
-                        <li>AI opponents now spawn with random car selections</li>
-                        <li>Improved car class system for better code organization</li>
-                        <li>Each car now has unique handling characteristics</li>
-                    </ul>
+                    <div class="changes-section">
+                        <h3 class="section-title">Improvements</h3>
+                        <ul class="changes-list">
+                            <li>Collision system enhancements for better accuracy</li>
+                            <li>AI speed handling improvements for more competitive racing</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="section-title">Bug Fixes</h3>
+                        <ul class="changes-list">
+                            <li>Fixed issue where AI cars persisted after error screens</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section technical">
+                        <h3 class="section-title">Technical Changes</h3>
+                        <ul class="changes-list">
+                            <li>Settings script completely refactored</li>
+                            <li>Main codebase split into multiple organized modules</li>
+                            <li>AI debug visualization (red lines) for development</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="changelog-entry debug">
-                <span class="entry-type">debug</span>
-                <p class="entry-text">FPS UI at screen top right</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Fixed imports</p>
+
+            <!-- Version 0.2 -->
+            <div class="version-block">
+                <div class="version-header-block">
+                    <h2 class="version-title">Version 0.2</h2>
+                    <span class="version-subtitle">AI</span>
+                    <p class="release-date">Released: September 29, 2025</p>
+                </div>
+                
+                <div class="version-content-block">
+                    <div class="changes-section">
+                        <h3 class="section-title">New Features</h3>
+                        <ul class="changes-list">
+                            <li>Advanced AI and pathfinding algorithm implementation</li>
+                            <li>AI car spawning: press 'N' to add AI opponents</li>
+                            <li>AI mode in settings allowing player car to autodrive</li>
+                            <li>AI functionality integrated into multiplayer mode</li>
+                            <li>Offline mode for single-player practice</li>
+                            <li>Cursor follow camera mode for dynamic viewing angles</li>
+                            <li>Enhanced menu buttons with improved visual feedback</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="section-title">Improvements</h3>
+                        <ul class="changes-list">
+                            <li>Drift system update for more realistic behavior</li>
+                            <li>Settings menu enhancements with better organization</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section technical">
+                        <h3 class="section-title">Technical Changes</h3>
+                        <ul class="changes-list">
+                            <li>Migration from pygame to pygame-ce for better performance</li>
+                            <li>Main.py modularized into multiple focused files</li>
+                            <li>AI debug UI with red line visualization</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <!-- October 9, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 9, 2025</h2>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.7.4</span>
-                <p class="entry-text">Audio thread update</p>
+            <!-- Version 0.1 -->
+            <div class="version-block">
+                <div class="version-header-block">
+                    <h2 class="version-title">Version 0.1</h2>
+                    <span class="version-subtitle">Performance, Physics, UI & Assets</span>
+                    <p class="release-date">Released: September 27, 2025</p>
+                </div>
+                
+                <div class="version-content-block">
+                    <div class="changes-section">
+                        <h3 class="section-title">New Features</h3>
+                        <ul class="changes-list">
+                            <li>Improved server architecture for multiplayer</li>
+                            <li>Higher server tick rate for reduced latency and better performance</li>
+                            <li>Camera zoom/dezoom functionality</li>
+                            <li>Controller support for gamepad input</li>
+                            <li>UI system overhaul with modern interface</li>
+                            <li>Settings page accessible from menu and in-game (Esc key)</li>
+                            <li>Fading tire marks that persist and gradually disappear</li>
+                            <li>AE86 with 32-rotation assets (diffuse, shadow, headlights)</li>
+                            <li>New track map with improved layout</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="section-title">Improvements</h3>
+                        <ul class="changes-list">
+                            <li>Enhanced physics engine for more realistic vehicle behavior</li>
+                            <li>Collision handling improvements for better accuracy</li>
+                            <li>Refined drift detection system</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="section-title">Known Issues</h3>
+                        <ul class="changes-list">
+                            <li>Collision system temporarily disabled due to stability issues</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section technical">
+                        <h3 class="section-title">Technical Changes</h3>
+                        <ul class="changes-list">
+                            <li>Camera class implementation for advanced view control</li>
+                            <li>Button class created for reusable UI components</li>
+                            <li>Main file reorganized for better code structure</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <!-- October 7, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 7, 2025</h2>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.7.3</span>
-                <p class="entry-text">Added input smoothing and fixed car physics</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Fixed PyInstaller</p>
-            </div>
-
-            <!-- October 6, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 6, 2025</h2>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.7.2</span>
-                <p class="entry-text">Better sound system with new SFX</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.7.1</span>
-                <p class="entry-text">Threaded audio system for improved performance</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Update sources and remove dev files</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Add dependencies for Pillow and NumPy</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.7.0</span>
-                <p class="entry-text">New audio system with turbo sound effects</p>
+            <!-- Version 0.0 -->
+            <div class="version-block">
+                <div class="version-header-block">
+                    <h2 class="version-title">Version 0.0</h2>
+                    <span class="version-subtitle">Physics Initialization</span>
+                    <p class="release-date">Released: September 25, 2025</p>
+                </div>
+                
+                <div class="version-content-block">
+                    <div class="changes-section">
+                        <h3 class="section-title">Initial Release</h3>
+                        <ul class="changes-list">
+                            <li>Foundation physics engine implementation</li>
+                            <li>Basic drift system mechanics</li>
+                            <li>Collision system framework</li>
+                            <li>Initial drift detection algorithm</li>
+                            <li>Pygame initialization and core game loop</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <!-- October 3, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 3, 2025</h2>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.6.7</span>
-                <p class="entry-text">Added M5 car model and AI neural network model</p>
-            </div>
-
-            <!-- October 2, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 2, 2025</h2>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.6.6</span>
-                <p class="entry-text">Cam system adjusted</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Entire project structure rework</p>
-            </div>
-
-            <!-- October 1, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">October 1, 2025</h2>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Subsurface rect outside surf area → fixed</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.6.5</span>
-                <p class="entry-text">Improved camera logic; adjusted scaling method for chunk mode</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Better track managing</p>
-            </div>
-            <div class="changelog-entry debug">
-                <span class="entry-type">debug</span>
-                <p class="entry-text">Chunk system tested on a 12k track map</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.6.4</span>
-                <p class="entry-text">slice_map.py to autoslice track map into tiles</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.6.3</span>
-                <p class="entry-text">Boundary collisions in chunk map system (v2)</p>
-            </div>
-
-            <!-- September 30, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">September 30, 2025</h2>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.6.2</span>
-                <p class="entry-text">New chunk map system (v1)</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.6.1</span>
-                <p class="entry-text">New 64 rotations car assets (car, shadow, headlights)</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.15</span>
-                <p class="entry-text">Settings update</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Settings → fixed</p>
-            </div>
-            <div class="changelog-entry issue">
-                <span class="entry-type">issue</span>
-                <p class="entry-text">Settings UI and functioning</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Use of substage for settings instead of stage</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">AI cars wasn't being cleared after an error screen → fixed</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.14</span>
-                <p class="entry-text">Better AI (account for speed)</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Split files</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.13</span>
-                <p class="entry-text">Collisions update; car data visible in AI mode; engine sound update</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.12</span>
-                <p class="entry-text">New RPM drift system</p>
-            </div>
-
-            <!-- September 29, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">September 29, 2025</h2>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.11</span>
-                <p class="entry-text">New engine sound system</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.10</span>
-                <p class="entry-text">RPM gauges and temporary sounds assets</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.9</span>
-                <p class="entry-text">Engine RPM (sound system)</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.8</span>
-                <p class="entry-text">Offline mode</p>
-            </div>
-
-            <!-- September 28, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">September 28, 2025</h2>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Split main.py into multiple files</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Detection getting stuck at the track map's end/start points → fixed</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">AI debug surface (red lines) → fixed</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.7</span>
-                <p class="entry-text">Settings update</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.6</span>
-                <p class="entry-text">AI cars now work in multiplayer</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.5</span>
-                <p class="entry-text">AI mode in settings (player car can autodrive)</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.4</span>
-                <p class="entry-text">Drift points object (?) and 'N' to spawn AI cars</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.5.3</span>
-                <p class="entry-text">New AI and path finding algorithm</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.4.2/3</span>
-                <p class="entry-text">UI updates</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.4.1</span>
-                <p class="entry-text">New drift detection system; cursor follow mode; better menu buttons</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Tire pos & duplicate lines → fixed</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.11</span>
-                <p class="entry-text">Switch from pygame to pygame-ce</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">"Leave room" button → fixed</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Player username input → fixed</p>
-            </div>
-
-            <!-- September 27, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">September 27, 2025</h2>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Collision system → fixed</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Camera clamp → fixed</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Tire marks → fixed</p>
-            </div>
-            <div class="changelog-entry issue">
-                <span class="entry-type">issue</span>
-                <p class="entry-text">Collision system temporary disabled</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">View fix</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.10</span>
-                <p class="entry-text">New track map and camera clamp fix</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Remove unused assets/ae86/image0031.png</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.9</span>
-                <p class="entry-text">UI system rework</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.8</span>
-                <p class="entry-text">New assets (car, shadow and headlights)</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.7</span>
-                <p class="entry-text">Headlights via pygame functions (todo: switch to images for perf)</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.6</span>
-                <p class="entry-text">UI menu update</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">"Leave room" button crashes the game → fixed</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.5</span>
-                <p class="entry-text">"Leave room" button update</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Separate functions</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.4</span>
-                <p class="entry-text">Button class; quick settings upgrade needed to be adjusted</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Separate files; use of constants</p>
-            </div>
-
-            <!-- September 26, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">September 26, 2025</h2>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Zoom clamp crash → fixed</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.3</span>
-                <p class="entry-text">Camera object for zoom/dezoom</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.2</span>
-                <p class="entry-text">Controller support; light physics upgrade</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.3.1</span>
-                <p class="entry-text">AE86 prototype with 32 rotations</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">drift_ratio communication → fixed</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.2.4</span>
-                <p class="entry-text">Tire marks that fade over time</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.2.3</span>
-                <p class="entry-text">Allow higher server tick for better performance and lower latency</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.2.2</span>
-                <p class="entry-text">Collisions upgrade</p>
-            </div>
-            <div class="changelog-entry debug">
-                <span class="entry-type">debug</span>
-                <p class="entry-text">auto_run_game.py to launch 2 instances connecting to the same host</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Indentations issue</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.2.1</span>
-                <p class="entry-text">Better server</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.1.5</span>
-                <p class="entry-text">Physic enhancement; error handling</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.1.4</span>
-                <p class="entry-text">Settings in menu; in-game (Esc)</p>
-            </div>
-            <div class="changelog-entry clean">
-                <span class="entry-type">clean</span>
-                <p class="entry-text">Comments</p>
-            </div>
-
-            <!-- September 25, 2025 -->
-            <div class="timeline-date">
-                <h2 class="date-title">September 25, 2025</h2>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.1.3</span>
-                <p class="entry-text">Better drift detection</p>
-            </div>
-            <div class="changelog-entry patch">
-                <span class="entry-type">patch</span>
-                <p class="entry-text">Collisions system broken → fixed</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.1.2</span>
-                <p class="entry-text">Add of collisions system</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.1.1</span>
-                <p class="entry-text">New physic, drift system enhancement</p>
-            </div>
-            <div class="changelog-entry version">
-                <span class="version-badge">v0.1.0</span>
-                <p class="entry-text">Pygame init</p>
-            </div>
         </div>
     </section>
 
