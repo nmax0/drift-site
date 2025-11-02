@@ -1058,6 +1058,50 @@ body {
     gap: 0.8rem;
 }
 
+.download-notice {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.notice-text {
+    color: #ffc107;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0;
+}
+
+.notice-text svg {
+    flex-shrink: 0;
+}
+
+.subversion-list {
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid rgba(78, 205, 196, 0.3);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.subversion-item {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.subversion-item:last-child {
+    margin-bottom: 0;
+}
+
+.subversion-item strong {
+    color: #4ecdc4;
+    font-weight: 600;
+}
+
 .features-list li {
     color: #e0e0e0;
     font-size: 0.95rem;

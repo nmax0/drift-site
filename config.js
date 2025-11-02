@@ -1,6 +1,6 @@
 // Configuration for Drift Race website
 const DRIFT_CONFIG = {
-    version: "0.8",
+    version: "0.6",
     // GitHub repository info
     repo: {
         owner: "legoman0701",

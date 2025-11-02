@@ -26,27 +26,27 @@
 
     <section class="download-section">
         <div class="download-container">
-            <!-- Version v0.7.10 (Latest) -->
+            <!-- Version v0.6 (Latest) -->
             <div class="version-item latest">
                 <button class="version-toggle">
                     <div class="version-header">
-                        <h2 class="version-number">v0.5.2</h2>
+                        <h2 class="version-number">v0.6</h2>
                         <span class="latest-badge">Latest</span>
                     </div>
                     <span class="toggle-icon">+</span>
                 </button>
                 <div class="version-content">
-                    <p class="version-date">Released: October 19, 2025</p>
+                    <p class="version-date">Released: November 2, 2025</p>
                     <p class="version-description">
-                        Major update with UI restructure, host/join multiplayer interface, game latency optimization, 
-                        and critical physics patches. Fixed RWD physics (was incorrectly AWD causing asymmetric torque), 
-                        improved path handling for better portability, and resolved various logic issues.
+                        Major performance and UI update featuring automatic track chunk system, rendering cache optimization, 
+                        complete host/join game UI overhaul, new loading screen, and key bindings management. Includes 
+                        optimized physics calculations and car specifications now managed through specs.json.
                     </p>
                     
                     <div class="download-options">
                         <h3 class="options-title">Download Options:</h3>
                         
-                        <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.10/drift_race_v0.7.10_installer.exe" 
+                        <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.6.1/drift_race_v0.6_installer.exe" 
                            class="download-button installer" 
                            download>
                             <div class="button-icon">
@@ -62,7 +62,7 @@
                             </div>
                         </a>
                         
-                        <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.10/drift_race_test-0.7.10.zip" 
+                        <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.6.1/drift_race_test-0.6.zip" 
                            class="download-button zip" 
                            download>
                             <div class="button-icon">
@@ -82,18 +82,20 @@
                     <div class="version-features">
                         <h4 class="features-title">Key Features:</h4>
                         <ul class="features-list">
-                            <li>Restructured UI system</li>
-                            <li>New host/join multiplayer interface</li>
-                            <li>Optimized game latency</li>
-                            <li>Fixed RWD physics (no more asymmetric torque)</li>
-                            <li>Improved path handling for portability</li>
-                            <li>Logic issue fixes and stability improvements</li>
+                            <li>Automatic track chunk slicing and storage at first run</li>
+                            <li>Text rendering cache for improved performance</li>
+                            <li>Complete host/join game UI overhaul</li>
+                            <li>New loading screen with progress indicators</li>
+                            <li>Key bindings management in settings</li>
+                            <li>Optimized physics calculations</li>
+                            <li>Improved button styling and navbar</li>
+                            <li>Fixed non-existent room join errors</li>
                         </ul>
                     </div>
 
                     <div class="version-info">
                         <p class="info-text">
-                            <strong>Requirements:</strong> Windows 10/11, Python 3.11+ (for source)
+                            <strong>Requirements:</strong> Windows 10/11 or Linux, Python 3.11+ (for source)
                         </p>
                         <p class="info-text">
                             <strong>Installation:</strong> Run the installer or extract the ZIP file. 
@@ -103,81 +105,60 @@
                 </div>
             </div>
 
-            <!-- Version v0.7.8 -->
+            <!-- Version v0.5 -->
             <div class="version-item">
                 <button class="version-toggle">
                     <div class="version-header">
-                        <h2 class="version-number">v0.5.1</h2>
+                        <h2 class="version-number">v0.5</h2>
                     </div>
                     <span class="toggle-icon">+</span>
                 </button>
                 <div class="version-content">
-                    <p class="version-date">Released: October 17, 2025</p>
+                    <p class="version-date">Released: October 19, 2025</p>
                     <p class="version-description">
-                        Previous version featuring debug mode, enhanced audio system with turbo effects, 
-                        and improved physics. Includes AE86 and M5 car models with full multiplayer support.
+                        Assets and UI focused update featuring enhanced tire grip, high-resolution AE86 assets, 
+                        dynamic turbo system, F3 debug mode, and comprehensive host/join interface. Complete UI 
+                        code restructure with improved cross-platform portability.
                     </p>
                     
-                    <div class="download-options">
-                        <h3 class="options-title">Download Options:</h3>
-                        
-                        <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.8/v0.7.8_installer.exe" 
-                           class="download-button installer" 
-                           download>
-                            <div class="button-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                    <polyline points="7 10 12 15 17 10"></polyline>
-                                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                                </svg>
+                    <div class="download-notice">
+                        <p class="notice-text">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            Downloads for this version are no longer available. Please use the latest version above.
+                        </p>
+                    </div>
+
+                    <div class="version-features">
+                        <h4 class="features-title">Subversions:</h4>
+                        <div class="subversion-list">
+                            <div class="subversion-item">
+                                <strong>v0.5.2</strong> - UI restructure, host/join multiplayer interface, game latency optimization, 
+                                physics patches including RWD fix
                             </div>
-                            <div class="button-content">
-                                <span class="button-title">Windows Installer</span>
-                                <span class="button-subtitle">.exe</span>
+                            <div class="subversion-item">
+                                <strong>v0.5.1</strong> - Debug mode (F3), enhanced audio/turbo system, improved physics, 
+                                AE86 and M5 car models
                             </div>
-                        </a>
-                        
-                        <a href="https://github.com/legoman0701/drift_race_test/releases/download/v0.7.8/v0.7.8.zip" 
-                           class="download-button zip" 
-                           download>
-                            <div class="button-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                    <polyline points="7 10 12 15 17 10"></polyline>
-                                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                                </svg>
-                            </div>
-                            <div class="button-content">
-                                <span class="button-title">Portable ZIP</span>
-                                <span class="button-subtitle">.zip</span>
-                            </div>
-                        </a>
+                        </div>
                     </div>
 
                     <div class="version-features">
                         <h4 class="features-title">Key Features:</h4>
                         <ul class="features-list">
-                            <li>Debug mode with performance overlays</li>
-                            <li>Enhanced audio and turbo system</li>
-                            <li>Updated physics and car handling</li>
-                            <li>Multiple car models (AE86, M5)</li>
-                            <li>Online multiplayer support</li>
-                            <li>AI opponents</li>
+                            <li>Enhanced tire grip model for better drift control</li>
+                            <li>High-resolution AE86 visual assets</li>
+                            <li>Dynamic turbo system with audio feedback</li>
+                            <li>Debug mode accessible via F3 key</li>
+                            <li>Comprehensive host/join game interface</li>
+                            <li>Complete UI code restructure</li>
+                            <li>Improved path handling for portability</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-
-            <!-- Placeholder for future versions -->
-            <div class="future-versions">
-                <p class="future-text">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="8" x2="12" y2="12"></line>
-                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                    </svg>
-                    Older versions available on the <a href="https://github.com/legoman0701/drift_race_test/releases" class="inline-link" target="_blank">GitHub releases page</a>.
-                </p>
             </div>
         </div>
 
