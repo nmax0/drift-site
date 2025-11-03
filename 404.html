@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Drift Race</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="contributors.html" class="nav-link">Contributors</a></li>
+                <li class="nav-item"><a href="download.html" class="nav-link">Download</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-dropdown>
+                        Documentation
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="changelog.html" class="dropdown-link">Changelog</a></li>
+                        <li><a href="car-guide.html" class="dropdown-link">Car Rendering</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="help.html" class="nav-link">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="error-404">
+        <div class="error-container">
+            <div class="error-content">
+                <h1 class="error-code">404</h1>
+                <h2 class="error-title">You've Drifted Off Course</h2>
+                <p class="error-message">
+                    Looks like you took a wrong turn. The page you're looking for doesn't exist.
+                </p>
+                
+                <div class="error-actions">
+                    <a href="index.html" class="error-button primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Back to Home
+                    </a>
+                    <a href="download.html" class="error-button secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Game
+                    </a>
+                </div>
+
+                <div class="error-links">
+                    <p class="links-title">Quick Links:</p>
+                    <ul class="links-list">
+                        <li><a href="changelog.html" class="error-link">View Changelog</a></li>
+                        <li><a href="help.html" class="error-link">Get Help</a></li>
+                        <li><a href="contributors.html" class="error-link">Contributors</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="error-visual">
+                <div class="tire-marks">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 20 100 Q 50 80, 80 100 T 140 100 T 200 100" 
+                              stroke="#4ecdc4" 
+                              stroke-width="3" 
+                              fill="none" 
+                              opacity="0.3"
+                              stroke-dasharray="10,5"/>
+                        <path d="M 20 110 Q 50 130, 80 110 T 140 110 T 200 110" 
+                              stroke="#4ecdc4" 
+                              stroke-width="3" 
+                              fill="none" 
+                              opacity="0.3"
+                              stroke-dasharray="10,5"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

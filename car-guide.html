@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Creation Guide - Drift Race</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="contributors.html" class="nav-link">Contributors</a></li>
+                <li class="nav-item"><a href="download.html" class="nav-link">Download</a></li>
+                <li class="nav-item dropdown active">
+                    <a href="#" class="nav-link dropdown-toggle active" data-dropdown>
+                        Documentation
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="changelog.html" class="dropdown-link">Changelog</a></li>
+                        <li><a href="car-guide.html" class="dropdown-link">Car Rendering</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="help.html" class="nav-link">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1 class="page-title">Car Rendering Guide</h1>
+        <p class="page-subtitle">Use the Blender template to render your custom car for Drift Race</p>
+    </section>
+
+    <section class="guide-section">
+        <div class="guide-container">
+            
+            <!-- Introduction -->
+            <div class="guide-intro">
+                <h2 class="guide-title">Overview</h2>
+                <p class="guide-text">
+                    This guide will walk you through using the official Drift Race Blender rendering template 
+                    to generate sprite sheets for your custom car. The template automatically renders 64 rotation 
+                    angles for diffuse, shadow, and headlight layers, making it easy to import your car model 
+                    and get it game-ready.
+                </p>
+                <p class="guide-text">
+                    <strong>Note:</strong> This guide assumes you already have a car model created in Blender. 
+                    If you need help modeling a car from scratch, check out Blender tutorials on vehicle modeling first.
+                </p>
+            </div>
+
+            <!-- Requirements -->
+            <div class="guide-block">
+                <h2 class="guide-title">What You'll Need</h2>
+                <div class="requirements-grid">
+                    <div class="requirement-item">
+                        <div class="requirement-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 class="requirement-title">Software</h3>
+                        <ul class="requirement-list">
+                            <li>Blender 3.0+ (Free)</li>
+                            <li>Drift Race rendering template</li>
+                            <li>Text editor for JSON files</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <div class="requirement-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="requirement-title">Files</h3>
+                        <ul class="requirement-list">
+                            <li>Your car model (.blend file)</li>
+                            <li>Car properly centered at origin</li>
+                            <li>Model scaled appropriately</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <div class="requirement-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="requirement-title">Time Estimate</h3>
+                        <ul class="requirement-list">
+                            <li>Template setup: 5 minutes</li>
+                            <li>Rendering: 5 minutes</li>
+                            <li>Game integration: 5 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What the Template Generates -->
+            <div class="guide-block highlight">
+                <h2 class="guide-title">What the Template Generates</h2>
+                <p class="guide-text">
+                    The Blender rendering template automatically produces:
+                </p>
+                <ul class="guide-list">
+                    <li><strong>64 diffuse sprites</strong> - Full 360° rotation (5.625° per frame) of your car's main appearance</li>
+                    <li><strong>64 shadow sprites</strong> - Matching shadow layer for realistic depth and ground contact</li>
+                    <li><strong>64 headlight sprites</strong> - Light cone layer for nighttime driving effects</li>
+                    <li><strong>Organized output</strong> - Sprites automatically named and ready for game integration</li>
+                    <li><strong>Consistent quality</strong> - Pre-configured camera, lighting, and render settings</li>
+                </ul>
+            </div>
+
+            <!-- Template Features -->
+            <div class="guide-block">
+                <h2 class="guide-title">Template Features</h2>
+                <p class="guide-text">
+                    The rendering template includes everything pre-configured:
+                </p>
+                <ul class="guide-list">
+                    <li><strong>Automated rotation script</strong> - Rotates your car and renders all 64 angles automatically</li>
+                    <li><strong>Layer separation</strong> - Separate render passes for diffuse, shadow, and headlights</li>
+                    <li><strong>Optimized settings</strong> - Camera angle, resolution, and output format already set up</li>
+                    <li><strong>Lighting setup</strong> - Pre-positioned lights for consistent, game-ready appearance</li>
+                    <li><strong>Easy import</strong> - Simple workflow to bring your car model into the template</li>
+                </ul>
+            </div>
+
+            <!-- Workflow Overview -->
+            <div class="guide-block">
+                <h2 class="guide-title">Rendering Workflow</h2>
+                <p class="guide-text">
+                    The process of rendering your car involves these main steps:
+                </p>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Download Template</h3>
+                            <p class="step-description">Get the official Drift Race Blender rendering template</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Import Your Car</h3>
+                            <p class="step-description">Bring your car model into the template and position it correctly</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Configure Layers</h3>
+                            <p class="step-description">Set up diffuse, shadow, and headlight render layers</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Render Sprites</h3>
+                            <p class="step-description">Run the automated script to generate all 64 rotation angles</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Add to Game</h3>
+                            <p class="step-description">Copy the rendered sprites and create car specification files</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Guide Content -->
+            
+            <!-- Step 1: Scene Preparation -->
+            <div class="guide-block guide-step">
+                <div class="step-header">
+                    <span class="step-badge">Step 1</span>
+                    <h2 class="guide-title">Scene Preparation</h2>
+                </div>
+                
+                <h3 class="subsection-title">Requirements</h3>
+                <ul class="guide-list">
+                    <li>Basic working knowledge of the Blender interface</li>
+                    <li>Blender version 4.5 or newer</li>
+                    <li>Drift Race Blender rendering template (download link coming soon)</li>
+                </ul>
+
+                <h3 class="subsection-title">Starting Scene</h3>
+                <p class="guide-text">
+                    The template begins with a primitive car and headlights. You are free to modify these elements to suit your needs.
+                </p>
+                
+                <div class="warning-box">
+                    <div class="warning-icon">⚠️</div>
+                    <div class="warning-content">
+                        <strong>CRITICAL:</strong> Only work within the collection named <code>Work_Folder</code>. 
+                        Modifying other collections may corrupt the scene setup.
+                    </div>
+                </div>
+
+                <div class="guide-images">
+                    <div class="guide-image-item">
+                        <img src="assets/documentation/car_rendering/screen1.png" alt="Template screen after launch" class="guide-img" onerror="this.src='placeholder.jpg'">
+                        <p class="image-caption">Template screen after launch</p>
+                    </div>
+                    <div class="guide-image-item">
+                        <img src="assets/documentation/car_rendering/screen2.png" alt="Folder structure" class="guide-img" onerror="this.src='placeholder.jpg'">
+                        <p class="image-caption">Folder structure in Outliner</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Integrating Your Asset -->
+            <div class="guide-block guide-step">
+                <div class="step-header">
+                    <span class="step-badge">Step 2</span>
+                    <h2 class="guide-title">Integrating Your Asset</h2>
+                </div>
+
+                <h3 class="subsection-title">A. Export Your Model</h3>
+                <p class="guide-text">
+                    First, prepare your car model for export from your working Blender file:
+                </p>
+                <ol class="numbered-list">
+                    <li>Navigate to <strong>File → Export → [any model file type]</strong></li>
+                    <li>Select and export your car model file</li>
+                </ol>
+
+                <h3 class="subsection-title">B. Importing the Model</h3>
+                <p class="guide-text">
+                    Import your 3D car model directly into the designated <code>Work_Folder</code> collection:
+                </p>
+                <ol class="numbered-list">
+                    <li>Select <strong>Work_Folder</strong> in the scene collection</li>
+                    <li>Navigate to <strong>File → Import → [Your Model File Type]</strong> (e.g., .fbx, .obj)</li>
+                    <li>Select and import your car model file</li>
+                    <li>Confirm that the imported asset is nested inside the <code>Work_Folder</code> collection in the Outliner</li>
+                </ol>
+
+                <div class="guide-images">
+                    <div class="guide-image-item">
+                        <img src="assets/documentation/car_rendering/screen3.png" alt="Work folder with imported car" class="guide-img" onerror="this.src='placeholder.jpg'">
+                        <p class="image-caption">Work_Folder with your imported car element</p>
+                    </div>
+                </div>
+
+                <h3 class="subsection-title">C. Scaling and Positioning</h3>
+                <p class="guide-text">
+                    Accurate scaling and positioning relative to the existing scene geometry (primitive car, lights) is 
+                    <strong>mandatory</strong> for correct rendering:
+                </p>
+                
+                <div class="info-box">
+                    <div class="info-icon">📏</div>
+                    <div class="info-content">
+                        <p><strong>Scaling:</strong> Adjust the size of your model to fit completely within the camera view.</p>
+                        <p><strong>Positioning:</strong> The center of your car model must be aligned with the scene's origin (0, 0, 0) 
+                        and positioned correctly on the ground plane.</p>
+                        <ul>
+                            <li>Middle X and Y at <code>0</code></li>
+                            <li>Wheels on ground: Z = <code>0</code></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <div class="warning-icon">⚠️</div>
+                    <div class="warning-content">
+                        <strong>IMPORTANT:</strong> Ensure the car and its generated shadow do not clip out of the camera view.
+                    </div>
+                </div>
+
+                <div class="guide-images triple">
+                    <div class="guide-image-item">
+                        <img src="screen.png" alt="Car orientation view 1" class="guide-img">
+                        <p class="image-caption">Front view - centered positioning</p>
+                    </div>
+                    <div class="guide-image-item">
+                        <img src="screen.png" alt="Car orientation view 2" class="guide-img">
+                        <p class="image-caption">Side view - ground alignment</p>
+                    </div>
+                    <div class="guide-image-item">
+                        <img src="screen.png" alt="Car orientation view 3" class="guide-img">
+                        <p class="image-caption">Top view - origin alignment</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Rendering and Output -->
+            <div class="guide-block guide-step">
+                <div class="step-header">
+                    <span class="step-badge">Step 3</span>
+                    <h2 class="guide-title">Rendering and Output</h2>
+                </div>
+
+                <h3 class="subsection-title">Execution</h3>
+                <p class="guide-text">
+                    To start the rendering process, execute the Python script included within the Blender file:
+                </p>
+                <ol class="numbered-list">
+                    <li>Open the <strong>Scripting</strong> workspace in Blender</li>
+                    <li>Locate the included Python script in the text editor</li>
+                    <li>Click the <strong>Run Script</strong> button (▶️) to begin rendering</li>
+                </ol>
+
+                <div class="guide-images">
+                    <div class="guide-image-item">
+                        <img src="screen.png" alt="Script screen with run button" class="guide-img">
+                        <p class="image-caption">Script screen with the Run button highlighted</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-icon">⏱️</div>
+                    <div class="info-content">
+                        <p><strong>Rendering Time:</strong> The script will render 64 frames × 3 layers (192 images total). 
+                        This process typically takes less than 5 minutes depending on your hardware and model complexity.</p>
+                    </div>
+                </div>
+
+                <h3 class="subsection-title">Output Paths</h3>
+                <p class="guide-text">
+                    The default output directory is set inside the GitHub repository's <code>dev_assets</code> folder. 
+                    The outputs are saved to specific subfolders:
+                </p>
+                <ul class="guide-list">
+                    <li><strong>Diffuse:</strong> Diffuse color map (main car appearance)</li>
+                    <li><strong>Shadow_Map:</strong> Shadow layer sprites</li>
+                    <li><strong>Light_Spray:</strong> Headlight cone effects</li>
+                </ul>
+
+                <div class="guide-images">
+                    <div class="guide-image-item">
+                        <img src="screen.png" alt="Output folder structure" class="guide-img">
+                        <p class="image-caption">Output folder structure with rendered sprites</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Advanced Customization -->
+            <div class="guide-block guide-step">
+                <div class="step-header">
+                    <span class="step-badge">Advanced</span>
+                    <h2 class="guide-title">Going Further</h2>
+                </div>
+
+                <p class="guide-text">
+                    For advanced users who want to implement custom animations, drivers, or special elements like 
+                    popup headlights or animated components:
+                </p>
+
+                <h3 class="subsection-title">Scene Index Property</h3>
+                <p class="guide-text">
+                    The scene index is stored under the Main scene custom properties (<code>SceneStatus</code>). 
+                    You can implement it in a driver for custom features such as:
+                </p>
+                <ul class="guide-list">
+                    <li>Animated headlights</li>
+                    <li>Back lights that activate at specific frames</li>
+                    <li>Popup headlights synchronized with rotation</li>
+                    <li>Custom animations tied to render frame</li>
+                </ul>
+
+                <div class="guide-images">
+                    <div class="guide-image-item">
+                        <img src="screen.png" alt="Scene index location" class="guide-img">
+                        <p class="image-caption">Location of the scene index in custom properties</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <p class="code-label">Example: Accessing scene index in driver</p>
+                    <code>scene.get("SceneStatus", 0)</code>
+                </div>
+            </div>
+
+            <!-- Quick Tips -->
+            <div class="guide-block tips">
+                <h2 class="guide-title">Important Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <span class="tip-icon">�</span>
+                        <p class="tip-text"><strong>Center Your Model:</strong> Car must be centered at origin (0,0,0) for proper rotation rendering</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">📏</span>
+                        <p class="tip-text"><strong>Check Scale:</strong> Match the size of existing cars (AE86, M5) for consistent gameplay balance</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">🔄</span>
+                        <p class="tip-text"><strong>Test First:</strong> Render a few frames first to verify positioning before full 64-sprite batch</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">💾</span>
+                        <p class="tip-text"><strong>Save Often:</strong> Save your .blend file before rendering to avoid losing template configurations</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">🎨</span>
+                        <p class="tip-text"><strong>Material Setup:</strong> Ensure materials are properly assigned for correct layer separation</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">⚡</span>
+                        <p class="tip-text"><strong>Render Time:</strong> Full 64x3 sprite rendering can take 30-60 minutes depending on complexity</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Resources -->
+            <div class="guide-block">
+                <h2 class="guide-title">Additional Resources</h2>
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://www.blender.org/download/" class="resource-link" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Download Blender
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.blender.org/manual/en/latest/" class="resource-link" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Blender Documentation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/legoman0701/drift_race_test" class="resource-link" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Drift Race GitHub Repository
+                        </a>
+                    </li>
+                    <li>
+                        <a href="help.html" class="resource-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            Help & FAQ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
