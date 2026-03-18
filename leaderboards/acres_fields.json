@@ -1,0 +1,11 @@
+{
+  "map_name": "Acres Fields",
+  "categories": {
+    "1lap": [
+      {"rank": 1, "player": "nmax", "time": "00:20:20", "car": "911", "date": "18/03/2026"}
+    ],
+    "classic_race": [
+        
+    ]
+  }
+}
