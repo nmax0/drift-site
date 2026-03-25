@@ -31,6 +31,84 @@
     <section class="changelog-section">
         <div class="version-timeline">
             
+            <!-- Version 0.7.1 -->
+            <div class="version-block">
+                <div class="version-header-block">
+                    <h2 class="version-title">Version 0.7.1</h2>
+                    <span class="version-subtitle">Performance & Architecture</span>
+                    <p class="release-date">Released: March 25, 2026</p>
+                </div>
+
+                
+                <div class="version-content-block">
+                    <div class="changes-section">
+                        <h3 class="section-title">Improvements</h3>
+                        <ul class="changes-list">
+                            <li><strong>Massive Performance Boost:</strong> Significantly optimized the game logic and rendering pipeline for higher, more stable frame rates.</li>
+                            <li><strong>New Restart Hotkey:</strong> Press <kbd>T</kbd> to instantly restart the entire race (available in Solo mode only).</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section technical">
+                        <h3 class="section-title">Technical Changes (Under the Hood)</h3>
+                        <ul class="changes-list">
+                            <li><strong>Architectural Restructure:</strong> Completely overhauled the <code>app.py</code> core loop and UI organization to decouple rendering, physics, and network logic.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Version 0.7.0 -->
+            <div class="version-block">
+                <div class="version-header-block">
+                    <h2 class="version-title">Version 0.7.0</h2>
+                    <span class="version-subtitle">Gameplay, Physics, Assets</span>
+                    <p class="release-date">Released: March 25, 2026</p>
+                </div>
+
+                
+                <div class="version-content-block">
+                    <div class="changes-section">
+                        <h3 class="section-title">New Features</h3>
+                        <ul class="changes-list">
+                            <li><strong>Global Leaderboards:</strong> Added a comprehensive leaderboard system to record and display the best track times across every map and game mode.</li>
+                            <li><strong>Car Specs &amp; Assets Page:</strong> Introduced an in-game documentation page that details all available vehicles and their individual performance specifications.</li>
+                            <li><strong>New Track - Acres Fields:</strong> Added a brand-new, hand-crafted map for players to master.</li>
+                            <li><strong>Classic Race Mode:</strong> Introduced a traditional racing game mode to complement the core drifting mechanics.</li>
+                            <li><strong>Gamepad Support:</strong> Implemented full controller support for improved handling and accessibility.</li>
+                            <li><strong>Car Customization System:</strong> Added a dynamic color palette system allowing players to tune and personalize their vehicle's paint job.</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="section-title">Improvements</h3>
+                        <ul class="changes-list">
+                            <li><strong>Overhauled Car Selection UI:</strong> Redesigned the vehicle selection screen for a cleaner display.</li>
+                            <li><strong>Quick Reset Hotkey:</strong> Press <kbd>R</kbd> to instantly reset your car to the last passed checkpoint.</li>
+                            <li><strong>Asset Auto-Detection:</strong> The game engine now automatically detects and loads car assets from directories, streamlining the addition of new vehicles.</li>
+                            <li><strong>Clean Exit Integration:</strong> Added a dedicated "Quit" button in the settings menu to ensure the game closes safely and properly.</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section">
+                        <h3 class="section-title">Bug Fixes</h3>
+                        <ul class="changes-list">
+                            <li><strong>Steering &amp; Physics:</strong> Fixed an underlying issue with car angle management to ensure accurate turning and drifting calculations.</li>
+                            <li><strong>Visual Glitches:</strong> Resolved a visual bug where tire marks would incorrectly spawn while the car was driving in reverse.</li>
+                            <li><strong>Crash Resolution:</strong> Patched a critical crash that occurred when the engine attempted to access an undefined (None) FPS value.</li>
+                        </ul>
+                    </div>
+
+                    <div class="changes-section technical">
+                        <h3 class="section-title">Technical Changes (Under the Hood)</h3>
+                        <ul class="changes-list">
+                            <li><strong>Compiled C Executable:</strong> Transitioned the game's build process to Nuitka. The game now runs as a natively compiled C executable, bypassing Python interpreter bottlenecks.</li>
+                            <li><strong>Modding Support (Blender):</strong> Released a standardized Blender template to help the community easily model, format, and add custom car folders to the game.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Version 0.6 -->
             <div class="version-block">
                 <div class="version-header-block">

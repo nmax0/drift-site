@@ -4,11 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const maps = [
         { id: 'acres_fields', file: 'leaderboards/acres_fields.json' },
-        { id: 'beta_center', file: 'leaderboards/beta_center.json' }
+        // { id: 'beta_center', file: 'leaderboards/beta_center.json' }
     ];
 
     const categoryNames = {
-        '1lap': '1 Lap',
         'classic_race': 'Classic Race'
     };
 
