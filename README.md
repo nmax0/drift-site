@@ -4,7 +4,7 @@ The official website for Drift Race, a multiplayer racing game featuring arcade 
 
 ## 🌐 Live Site
 
-Visit the live site at: [https://nmax0.github.io/drift-site/](https://nmax0.github.io/drift-site/)
+Visit the live site at: [drift_race_web](https://nmax0.github.io/drift_race_web/)
 
 ## 🎮 About Drift Race
 
